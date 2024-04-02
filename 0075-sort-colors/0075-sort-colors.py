@@ -15,12 +15,13 @@ class Solution(object):
                 nums[mid] = temp
                 mid+=1
                 low+=1
+            
+            elif(nums[mid] == 1):
+                mid+=1
+                
             elif(nums[mid] == 2):
                 temp = nums[high]
                 nums[high] = nums[mid]
                 nums[mid] = temp
                 high-=1
-            elif(nums[mid] == 1):
-                mid+=1
-            
         return nums
