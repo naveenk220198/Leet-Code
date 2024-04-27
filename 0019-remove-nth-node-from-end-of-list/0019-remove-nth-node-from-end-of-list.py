@@ -11,16 +11,17 @@ class Solution(object):
         :rtype: ListNode
         """
         fast = head
-        for i in range(1, n):
+        for i in range(n):
             fast = fast.next
-        if fast.next == None: return head.next
-        i = 0
+        if fast == None: return head.next
+        # i = 0
+        slow = head
         while fast.next!=None:
-            if i==0:
-                slow = head
-                i = 1
-            else:
-                slow = slow.next
+            # if i==0:
+            #     slow = head
+            #     i = 1
+            # else:
+            slow = slow.next
             fast = fast.next
         deleteNode = slow.next
         slow.next = slow.next.next
