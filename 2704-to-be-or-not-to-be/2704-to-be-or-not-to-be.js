@@ -3,10 +3,9 @@
  * @return {Object}
  */
 var expect = function(val) {
-    let newVal = val
     return {
         toBe: function (val2) {
-            if (val2 === newVal) {
+            if (val2 === val) {
                 return true
             }
             else {
@@ -14,7 +13,7 @@ var expect = function(val) {
             }
         },
         notToBe: function (val2) {
-            if (val2 !== newVal) {
+            if (val2 !== val) {
                 return true
             }
             else {
