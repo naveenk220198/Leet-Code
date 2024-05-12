@@ -19,19 +19,50 @@ var majorityElement = function(nums) {
 //         }
 //     }
 //     return -1
-    let hm = new Map()
-    for (let i = 0; i< l; i++) {
-        if (hm.has(nums[i])) {
+
+
+
+// Better using hashing
+//     let hm = new Map()
+//     for (let i = 0; i< l; i++) {
+//         if (hm.has(nums[i])) {
             
-            hm.set(nums[i], hm.get(nums[i]||0) + 1)
+//             hm.set(nums[i], hm.get(nums[i]||0) + 1)
+//         }
+//         else {
+//             hm.set(nums[i], 1)
+//         }
+//     }
+//     for (const [num, count] of hm) {
+//         if (count > Math.floor(l/2) ) {
+//             return num
+//         }
+//     }
+
+// Optimal using Moored voting algorithm
+    let element = 0
+    let cnt = 0
+    for (let i =0; i<l; i++) {
+        if (cnt ==0) {
+            element = nums[i]
+            cnt++
+        }
+        else if (element == nums[i]) {
+            cnt++
         }
         else {
-            hm.set(nums[i], 1)
+            cnt--
+        }  
+    }
+    
+    let cnt1 = 0
+    for (let j = 0; j<l; j++) {
+        if (nums[j] == element) {
+            cnt1++
         }
     }
-    for (const [num, count] of hm) {
-        if (count > Math.floor(l/2) ) {
-            return num
-        }
+    if (cnt1 > Math.floor(l/2)) {
+        return element
     }
+    return -1
 };
