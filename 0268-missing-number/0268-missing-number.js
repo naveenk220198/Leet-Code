@@ -41,14 +41,24 @@ var missingNumber = function(nums) {
     //     }
     // }
 
-//     Optimal
-    let xor1 = 0
-    for (let i = 1; i<=nums.length; i++) {
-        xor1 = xor1 ^ i
-    }
+//     Optimal - O(2N)
+    // let xor1 = 0
+    // for (let i = 1; i<=nums.length; i++) {
+    //     xor1 = xor1 ^ i
+    // }
+    // let xor2 = 0
+    // for (let j = 0; j<nums.length; j++) {
+    //     xor2 = xor2 ^ nums[j]
+    // }
+    // return xor1 ^ xor2
+    
+//     Optimal - O(N)
+    let xor1 = 0 
     let xor2 = 0
-    for (let j = 0; j<nums.length; j++) {
-        xor2 = xor2 ^ nums[j]
+    for (let i=0; i <nums.length; i++) {
+        xor1 = xor1 ^ i+1
+        xor2 = xor2 ^ nums[i]
     }
+    // xor1 = xor1 ^ (nums.length)
     return xor1 ^ xor2
 };
