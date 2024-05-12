@@ -4,6 +4,8 @@
  */
 var missingNumber = function(nums) {
     l = nums.length
+    
+//     Brute - using two loops to check if number exists in array itself
     // if (l==1) {
     //     if (nums[0] == 1) {
     //         return 0
@@ -25,13 +27,28 @@ var missingNumber = function(nums) {
     //     }
     // }
     // return 0
-    let hash = new Array(l+1).fill(0)
-    for (let j=0; j< l; j++) {
-        hash[nums[j]]++
+
+
+
+    // Better approach using hash array 
+    // let hash = new Array(l+1).fill(0)
+    // for (let j=0; j< l; j++) {
+    //     hash[nums[j]]++
+    // }
+    // for (let j = 0; j < hash.length; j++) {
+    //     if (hash[j]==0) {
+    //         return j
+    //     }
+    // }
+
+//     Optimal
+    let xor1 = 0
+    for (let i = 1; i<=nums.length; i++) {
+        xor1 = xor1 ^ i
     }
-    for (let j = 0; j < hash.length; j++) {
-        if (hash[j]==0) {
-            return j
-        }
+    let xor2 = 0
+    for (let j = 0; j<nums.length; j++) {
+        xor2 = xor2 ^ nums[j]
     }
+    return xor1 ^ xor2
 };
