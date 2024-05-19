@@ -4,9 +4,9 @@
  */
 var subsets = function(nums) {
     let len = nums.length
-    let subsets = 2**len
+    let subsets = 2**len - 1
     let ans = []
-    for (let i = 0; i < subsets; i++) {
+    for (let i = 0; i <= subsets; i++) {
         let res = []
         for (let j = 0; j < len; j++) {
             if (i & (1<<j)) {
@@ -18,3 +18,22 @@ var subsets = function(nums) {
     return ans
     
 };
+
+// function subsets(nums) {
+
+//     let result = [[]];
+
+//     nums.forEach(num => {
+
+//         const currentLength = result.length;
+
+//         for (let i = 0; i < currentLength; i++) {
+
+//             const newSubset = result[i].concat(num);
+
+//             result.push(newSubset);
+//         }
+//     });
+    
+//     return result;
+// }
