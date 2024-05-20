@@ -9,34 +9,50 @@ var MyQueue = function() {
  * @return {void}
  */
 MyQueue.prototype.push = function(x) {
-    while (this.s1.length != 0) {
-        this.s2.push(this.s1.pop())
-    }
+    // while (this.s1.length != 0) {
+    //     this.s2.push(this.s1.pop())
+    // }
     this.s1.push(x)
-    while (this.s2.length != 0) {
-        this.s1.push(this.s2.pop())
-    }
+    // while (this.s2.length != 0) {
+    //     this.s1.push(this.s2.pop())
+    // }
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.pop = function() {
-    return this.s1.pop()
+    if (this.s2.length !== 0) {
+        return this.s2.pop()
+    }
+    else {
+        while (this.s1.length != 0) {
+            this.s2.push(this.s1.pop())
+        }
+        return this.s2.pop()
+    }
 };
 
 /**
  * @return {number}
  */
 MyQueue.prototype.peek = function() {
-    return this.s1[this.s1.length - 1]
+    if (this.s2.length != 0) {
+        return this.s2[this.s2.length - 1]
+    }
+    else {
+        while (this.s1.length !== 0) {
+            this.s2.push(this.s1.pop())
+        }
+        return this.s2[this.s2.length - 1]
+    }
 };
 
 /**
  * @return {boolean}
  */
 MyQueue.prototype.empty = function() {
-    return this.s1.length === 0
+    return this.s1.length === 0 && this.s2.length === 0
 };
 
 /** 
