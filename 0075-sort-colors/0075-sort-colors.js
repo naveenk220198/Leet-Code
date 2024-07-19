@@ -38,29 +38,49 @@ var sortColors = function(nums) {
     
     
 //     Optimal  - National flag algo, 3 pointer
+//     let left = 0
+//     let mid = 0
+//     let high = nums.length - 1
+//     let temp
+//     while(mid <= high) {
+//         if (nums[mid] == 0) {
+//             temp = nums[mid]
+//             nums[mid] = nums[left]
+//             nums[left] = temp
+//             mid++
+//             left++
+//         }
+//         else if(nums[mid] == 1) {
+//             mid++
+           
+//         }
+//         else {
+//             temp = nums[mid]
+//             nums[mid] = nums[high]
+//             nums[high] = temp
+//             high--
+//         }
+//     }
+
+
     let left = 0
     let mid = 0
     let high = nums.length - 1
-    let temp
-    while(mid <= high) {
-        if (nums[mid] == 0) {
-            temp = nums[mid]
-            nums[mid] = nums[left]
-            nums[left] = temp
+    while (mid <= high) {
+        if (nums[mid] === 0) {
+            [nums[left], nums[mid]] = [nums[mid], nums[left]]
             mid++
             left++
         }
-        else if(nums[mid] == 1) {
+        else if(nums[mid] === 1) {
             mid++
-           
         }
         else {
-            temp = nums[mid]
-            nums[mid] = nums[high]
-            nums[high] = temp
+            [nums[high], nums[mid]] = [nums[mid], nums[high]]
             high--
         }
     }
+    // return nums
 
 
 };
