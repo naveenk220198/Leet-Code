@@ -22,5 +22,18 @@ Solving leetcode DSA problems
 ## Two Pointers
 |  |
 | ------- |
+| [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
 | [0908-middle-of-the-linked-list](https://github.com/naveenk220198/Leet-Code/tree/master/0908-middle-of-the-linked-list) |
+## Array
+|  |
+| ------- |
+| [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
+## Greedy
+|  |
+| ------- |
+| [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
+## Sorting
+|  |
+| ------- |
+| [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
 <!---LeetCode Topics End-->
