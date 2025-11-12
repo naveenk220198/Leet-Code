@@ -27,6 +27,7 @@ Solving leetcode DSA problems
 ## Array
 |  |
 | ------- |
+| [0057-insert-interval](https://github.com/naveenk220198/Leet-Code/tree/master/0057-insert-interval) |
 | [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
 ## Greedy
 |  |
