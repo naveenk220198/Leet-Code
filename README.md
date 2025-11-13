@@ -29,6 +29,7 @@ Solving leetcode DSA problems
 | ------- |
 | [0057-insert-interval](https://github.com/naveenk220198/Leet-Code/tree/master/0057-insert-interval) |
 | [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
+| [1538-maximum-points-you-can-obtain-from-cards](https://github.com/naveenk220198/Leet-Code/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
 ## Greedy
 |  |
 | ------- |
@@ -37,4 +38,12 @@ Solving leetcode DSA problems
 |  |
 | ------- |
 | [0455-assign-cookies](https://github.com/naveenk220198/Leet-Code/tree/master/0455-assign-cookies) |
+## Sliding Window
+|  |
+| ------- |
+| [1538-maximum-points-you-can-obtain-from-cards](https://github.com/naveenk220198/Leet-Code/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
+## Prefix Sum
+|  |
+| ------- |
+| [1538-maximum-points-you-can-obtain-from-cards](https://github.com/naveenk220198/Leet-Code/tree/master/1538-maximum-points-you-can-obtain-from-cards) |
 <!---LeetCode Topics End-->
