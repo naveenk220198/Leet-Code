@@ -3,20 +3,12 @@
  * @return {Function}
  */
 var compose = function(functions) {
-    let res
-    if (functions.length < 1) {
-        return function(x) {
-            return x
+    
+    return function(x) {
+        for (let i = functions.length - 1; i>=0; i--) {
+            x = functions[i](x)
         }
-    }
-    else {
-        return function(x) {
-        res = functions[functions.length-1](x)
-        for (let i = functions.length-2; i>-1; i--) {
-            res = functions[i](res)
-        }
-        return res
-        }
+        return x
     }
 };
 
